@@ -20,6 +20,6 @@ Thông tin đơn hàng:
 
 Chúng tôi sẽ liên hệ bạn khi đơn hàng được xác nhận.
 Trân trọng!
-`; // Viết template ở đây
+`; // Viết template ở đây vbvbvbv
 
 console.log(emailTemplate);

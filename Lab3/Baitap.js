@@ -41,35 +41,29 @@ function createUser(name, age, isAdmin) {
     };
 }
 // Viết lại với default parameters:
-function createUser(name = "Anonymous", age = 18, isAdmin = false) {
-    return {
+const createUser(name = "Tduc", age = 18, isAdmin = false) =>({
+
         name: name,
         age: age,
         isAdmin: isAdmin,
-    };
-}
+});
 // Bài 3:
 // Hàm mergeArrays
-function mergeArrays(...arrays) {
-    return arrays.flat();
-}
+const mergeArrays = (...arrays) => arrays.flat();
+
 // Hàm sumAll
-function sumAll(...numbers) {
-    return numbers.reduce((sum, num) => sum + num, 0);
-}
+const sumAll = (...numbers) => numbers.reduce((sum, num) => sum + num, 0);
+
 // Hàm createProduct
-function createProduct(name, price, inStock = true) {
-    return {
-        name: name,
-        price: price,
-        inStock: inStock,
-    };
-}
+const createProduct = (name, price, inStock = true) => ({
+    name,
+    price,
+    inStock
+});
+
 // Bài 4:
-function shoppingCart(customerName, ...products) {
-    return {
-        customerName: customerName,
-        products: products,
-        totalItems: products.length,
-    };
-}
+const shoppingCart = (customerName, ...products) => ({
+    customerName,
+    products,
+    totalItems: products.length
+});

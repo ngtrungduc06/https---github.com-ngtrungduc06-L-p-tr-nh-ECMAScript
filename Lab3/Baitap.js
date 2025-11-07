@@ -29,19 +29,8 @@ document.addEventListener("click", () => {
 });
 
 // Bài 2:
-function createUser(name, age, isAdmin) {
-    if (name === undefined) name = "Anonymous";
-    if (age === undefined) age = 18;
-    if (isAdmin === undefined) isAdmin = false;
-
-    return {
-        name: name,
-        age: age,
-        isAdmin: isAdmin,
-    };
-}
 // Viết lại với default parameters:
-const createUser(name = "Tduc", age = 18, isAdmin = false) =>({
+const createUser = (name = "Tduc", age = 18, isAdmin = false) =>({
 
         name: name,
         age: age,

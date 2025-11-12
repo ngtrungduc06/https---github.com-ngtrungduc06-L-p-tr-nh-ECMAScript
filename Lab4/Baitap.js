@@ -56,3 +56,40 @@ function delay(ms) {
 }
 
 delay(2000).then(() => console.log("2 seconds passed"));
+// Bài 2:
+function fetchMultipleData(urls) {
+    // Hàm giả lập việc fetch dữ liệu user theo ID
+    function fetchUserData(userId) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (userId > 0) {
+                    resolve({ id: userId, name: `User ${userId}` });
+                } else {
+                    reject(`Invalid user ID: ${userId}`);
+                }
+            }, 1000);
+        });
+    }
+
+    // Tạo mảng Promise cho tất cả URLs (hoặc ID)
+    const promises = urls.map((url) => {
+        // Giả sử url có dạng "/api/user/1" => tách ID ra
+        const userId = parseInt(url.split("/").pop());
+        return fetchUserData(userId);
+    });
+
+    // Dùng Promise.all để chờ tất cả hoàn thành
+    return Promise.all(promises);
+}
+
+// Gọi thử hàm
+fetchMultipleData(["/api/user/1", "/api/user/2", "/api/user/3"])
+    .then((users) => {
+        console.log("All users:", users);
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    })
+    .finally(() => {
+        console.log("All operations completed");
+    });

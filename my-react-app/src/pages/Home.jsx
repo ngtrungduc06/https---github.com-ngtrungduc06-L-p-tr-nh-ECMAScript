@@ -12,16 +12,16 @@ function Home() {
                 "https://datviettour.com.vn/uploads/images/tin-tuc-SEO/mien-trung/Da-Nang/danh-thang/ba-na-hills.jpg",
         },
         {
-            id: 101,
-            title: "Tour Sapa – Fansipan",
-            image:
-                "https://mettavoyage.com/wp-content/uploads/2023/01/sapa-fansipan.jpg",
-        },
-        {
             id: 102,
             title: "Tour Nhật Bản Mùa Hoa Anh Đào",
             image:
                 "https://www.vinagrouptravel.com/Media/images/NH%E1%BA%ACT%20HOA%20ANH%20%C4%90%C3%80O%20(2).png",
+        },
+        {
+            id: 101,
+            title: "Tour Sapa – Fansipan",
+            image:
+                "https://mettavoyage.com/wp-content/uploads/2023/01/sapa-fansipan.jpg",
         },
     ];
 

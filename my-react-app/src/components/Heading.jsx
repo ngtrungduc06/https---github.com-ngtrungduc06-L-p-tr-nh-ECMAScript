@@ -1,9 +1,10 @@
 export default function Heading({ title }) {
     return (
         <div className="text-center">
-            <span className="text-4xl font-bold text-blue-500 border-b-2 border-blue-500 uppercase inline-block">
+            <h2 className="text-3xl font-extrabold text-blue-900 tracking-wide uppercase">
                 {title}
-            </span>
+            </h2>
+            <div className="w-80 h-[3px] bg-orange-500 mx-auto mt-2 rounded"></div>
         </div>
-    )
+    );
 }
